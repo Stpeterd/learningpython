@@ -34,12 +34,12 @@ label.grid(row=0, column=0, jls_extract_var=column_count, sticky="we")
 for row in range(row_count):
     for column in range(column_count):
         value = button_values0[row][column]
-        button = tkinter.Button(frame, text=value, font=("Arial" 30), width=column_count-1, height=1, command=lambda value=value: button_clicked(value))
+        button = tkinter.Button(frame, text=value, font=("Arial", 30), width=column_count-1, height=1, command=lambda value=value: button_clicked(value))
         if value in top_symbols:
             button.config(foreground=color_black, background=color_light_grey)
-            elif value in right_symbols:
+        elif value in right_symbols:
                 button.config(foregound=color_white, background=color_orange)
-            else:
+        else:
                 button.config(foreground=color_white, background=color_dark_grey)
 
                 button,grid(row=row+1, column=column)
