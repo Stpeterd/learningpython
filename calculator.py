@@ -1,7 +1,6 @@
 # a calculator app in python
 
-
-
+import tkinter as Tk
 
 def remove_zero_decimal(num):
     if num == int(num):
