@@ -1,12 +1,15 @@
 # a calculator app in python
 
+
+
+
 def remove_zero_decimal(num):
     if num == int(num):
         return str(int(num))
     else:
         return str(num)
 
-import tkinter
+import tkinter as Tk
 
 button_values = [
     ["AC", "+/-", "%", "÷"], 
