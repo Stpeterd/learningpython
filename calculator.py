@@ -1,14 +1,7 @@
 # a calculator app in python
 
-import tkinter as Tk
+import tkinter 
 
-def remove_zero_decimal(num):
-    if num == int(num):
-        return str(int(num))
-    else:
-        return str(num)
-
-import tkinter as Tk
 
 button_values = [
     ["AC", "+/-", "%", "÷"], 
@@ -25,7 +18,7 @@ row_count = len(button_values) #5
 column_count = len(button_values[0]) #4
 
 color_light_grey = "#D4D4D2"
-color_black = "1C1C1C"
+color_black = "#1C1C1C"
 color_dark_grey = "#505050"
 color_orange = "#FF9500"
 color_white = "white"
@@ -54,16 +47,26 @@ for row in range(row_count):
 
 frame.pack()
 
+
 #A+B, A-B, A*B, A/B
 A = "0"
 operator = None
 B = None
 
+#def button_clicked(value):
+   #global right_symbols, top_symbols, label, A, B, operator
+
 def clear_all():
     global A, B, operator
     A = "0"
-    B = None
     operator = None
+    B = None
+
+def remove_zero_decimal(num):
+    if num % 1 == 0:
+        num = int(num)
+    return str(num) 
+
 def button_clicked(value):
     global right_symbols, top_symbols, label, A, B, operator
 
